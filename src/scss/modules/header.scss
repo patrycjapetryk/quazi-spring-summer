@@ -1,0 +1,54 @@
+@import '../variables';
+@import '../mixins';
+
+.header {
+  width: 100%;
+  margin-bottom: 100px;
+
+  &__title {
+    font-size: clamp(14px, 20vw, 240px);
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: calc(0.03em * -1);
+    line-height: 1em;
+    margin: -40px 0 0 0;
+
+    @media (max-width: $breakpoint-tablet-width) {
+      margin: -10px 0 0 0;
+    }
+  }
+
+  &__second-title {
+    font-size: clamp(14px, 5vw, 56px);
+    font-weight: 300;
+    letter-spacing: calc(0.02em * -1);
+    line-height: 1em;
+    margin: -25px 0 0 4px;
+    text-align: left;
+
+    @media (max-width: $breakpoint-tablet-width) {
+      margin: -10px 0 0 2px;
+    }
+    @media (max-width: $breakpoint-mobile-width) {
+      margin: -1px 0 0 2px;
+    }
+  }
+
+  &__subtitle {
+    @include subtitle;
+
+    display: block;
+    margin: 15px 0 0 68%;
+    text-align: left;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      margin: 15px 0 0 48%;
+    }
+  }
+
+  &__image {
+    width: 40%;
+    display: inline-block;
+    margin: 70px 0 0;
+  }
+}
